@@ -49,7 +49,7 @@ correct_states_df = pandas.DataFrame(correct_states_dict)
 correct_states_df.to_csv("correct_states.csv")
 
 states_list = states_df.state.to_list()
-states_to_study = [state for state in states_list if state not in states_correct]
+states_to_study = [state for state in states_list if state not in states_correct] #list comprehension
 states_to_study_dict = {"States to Study": states_to_study}
 study_states_df = pandas.DataFrame(states_to_study_dict)
 study_states_df.to_csv("states_to_study.csv")
